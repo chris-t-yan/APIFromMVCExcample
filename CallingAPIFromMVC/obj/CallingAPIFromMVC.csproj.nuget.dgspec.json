@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hrist\\Desktop\\CallingAPIFromMVC\\CallingAPIFromMVC\\CallingAPIFromMVC\\CallingAPIFromMVC.csproj": {}
+    "C:\\Users\\hrist\\Desktop\\CallingAPIFromMVC\\APIFromMVCExcample\\CallingAPIFromMVC\\CallingAPIFromMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hrist\\Desktop\\CallingAPIFromMVC\\CallingAPIFromMVC\\CallingAPIFromMVC\\CallingAPIFromMVC.csproj": {
+    "C:\\Users\\hrist\\Desktop\\CallingAPIFromMVC\\APIFromMVCExcample\\CallingAPIFromMVC\\CallingAPIFromMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hrist\\Desktop\\CallingAPIFromMVC\\CallingAPIFromMVC\\CallingAPIFromMVC\\CallingAPIFromMVC.csproj",
+        "projectUniqueName": "C:\\Users\\hrist\\Desktop\\CallingAPIFromMVC\\APIFromMVCExcample\\CallingAPIFromMVC\\CallingAPIFromMVC.csproj",
         "projectName": "CallingAPIFromMVC",
-        "projectPath": "C:\\Users\\hrist\\Desktop\\CallingAPIFromMVC\\CallingAPIFromMVC\\CallingAPIFromMVC\\CallingAPIFromMVC.csproj",
+        "projectPath": "C:\\Users\\hrist\\Desktop\\CallingAPIFromMVC\\APIFromMVCExcample\\CallingAPIFromMVC\\CallingAPIFromMVC.csproj",
         "packagesPath": "C:\\Users\\hrist\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hrist\\Desktop\\CallingAPIFromMVC\\CallingAPIFromMVC\\CallingAPIFromMVC\\obj\\",
+        "outputPath": "C:\\Users\\hrist\\Desktop\\CallingAPIFromMVC\\APIFromMVCExcample\\CallingAPIFromMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
