@@ -11,8 +11,8 @@ namespace CallingAPIFromMVC.Controllers
 {
     public class UsersController : Controller
     {
-        private readonly IExternalApiMangementService _externalApiMangementService;
-        public UsersController(IExternalApiMangementService externalApiMangementService)
+        private readonly IStudentMangementService _externalApiMangementService;
+        public UsersController(IStudentMangementService externalApiMangementService)
         {
             _externalApiMangementService = externalApiMangementService;
         }
@@ -76,7 +76,8 @@ namespace CallingAPIFromMVC.Controllers
         // GET: UsersController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View(_externalApiMangementService.GetAll().FirstOrDefault(x => x.StudentId == id));
+            _externalApiMangementService.Delete(id);
+            return RedirectToAction(nameof(Index));
         }
 
         // POST: UsersController/Delete/5

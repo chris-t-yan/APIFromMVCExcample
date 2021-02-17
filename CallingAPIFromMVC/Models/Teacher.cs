@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CallingAPIFromMVC.Models
 {
-    public class Student: IEntity
+    public class Teacher : IEntity
     {
         public int ID { get; set; }
         public string Name { get; set; }

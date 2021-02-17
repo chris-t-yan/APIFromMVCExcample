@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using CallingAPIFromMVC.Interfaces;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +11,10 @@ using System.Threading.Tasks;
 
 namespace CallingAPIFromMVC.Services
 {
-    public class BaseApiService
+    public class BaseApiService<TEntity> where TEntity : class, IEntity
     {
+        private static string BASE_API_URL = "asda";
+        private static string BEARER_TOKEN = "asda";
         protected TResponse SendRequest<TRequest, TResponse>(string uri, TRequest request, HttpMethod method, AuthenticationHeaderValue authentication, Dictionary<string, string> headers = null) where TResponse : class
         {
             try
@@ -57,5 +60,26 @@ namespace CallingAPIFromMVC.Services
                 throw new Exception($"URI: {uri}. Exception: {ex}");
             }
         }
+
+        public IEnumerable<TEntity> GetAll()
+        {
+            return SendRequest<string, IEnumerable<TEntity>>($"{BASE_API_URL}", string.Empty, HttpMethod.Get, new AuthenticationHeaderValue("Basic", BEARER_TOKEN));
+        }
+        public TEntity Create(TEntity entity)
+        {
+            return SendRequest<TEntity, TEntity>($"{BASE_API_URL}/create", entity, HttpMethod.Put, new AuthenticationHeaderValue("Bearer", BEARER_TOKEN));
+        }
+        public TEntity Update(TEntity entity)
+        {
+            return SendRequest<TEntity, TEntity>($"{BASE_API_URL}/update", entity, HttpMethod.Post, new AuthenticationHeaderValue("Bearer", BEARER_TOKEN));
+        }
+        public TEntity Delete(int id)
+        {
+            return SendRequest<int, TEntity>($"{BASE_API_URL}/delete", id, HttpMethod.Delete, new AuthenticationHeaderValue("Bearer", BEARER_TOKEN));
+        }
+
+
+        
+
     }
 }

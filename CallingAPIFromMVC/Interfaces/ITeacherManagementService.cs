@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace CallingAPIFromMVC.Interfaces
 {
-    public interface IExternalApiMangementService
+    interface ITeacherManagementService : IBaseApiService<Teacher>
     {
-        List<Student> GetAll();
-        Student Create(Student o);
-        Student Update(Student o);
-        Student Delete(int ID);
     }
 }

@@ -35,7 +35,7 @@ namespace CallingAPIFromMVC
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddScoped<IExternalApiMangementService, ExternalApiMangementService>();
+            services.AddScoped<IStudentMangementService, StudentMangementService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
