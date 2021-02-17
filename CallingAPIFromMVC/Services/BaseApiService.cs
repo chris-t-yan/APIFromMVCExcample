@@ -23,7 +23,7 @@ namespace CallingAPIFromMVC.Services
                     var payload = JsonConvert.SerializeObject(request);
 
                     var requestMessage = new HttpRequestMessage() { Method = method, RequestUri = new Uri(uri) };
-                    
+
                     if (method != HttpMethod.Get)
                     {
                         var content = new StringContent(payload, Encoding.UTF8, "application/json");

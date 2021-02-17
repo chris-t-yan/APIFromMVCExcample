@@ -20,7 +20,6 @@ namespace CallingAPIFromMVC.Services
         }
         public List<Student> GetAll()
         {
-            //sdf
             return SendRequest<string, List<Student>>($"{BASE_API_URL}", string.Empty, HttpMethod.Get, new AuthenticationHeaderValue("Basic", BEARER_TOKEN));
         }
         public Student Create(Student o)
