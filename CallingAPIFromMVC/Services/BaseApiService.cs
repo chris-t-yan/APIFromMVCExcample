@@ -16,17 +16,19 @@ namespace CallingAPIFromMVC.Services
         {
             try
             {
-                var handler = new HttpClientHandler();
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11;
-                using (var client = new HttpClient(handler))
+                using (var client = new HttpClient())
                 {
                     client.DefaultRequestHeaders.Authorization = authentication;
                     var payload = JsonConvert.SerializeObject(request);
 
                     var requestMessage = new HttpRequestMessage() { Method = method, RequestUri = new Uri(uri) };
-                    var content = new StringContent(payload, Encoding.UTF8, "application/json");
+                    
                     if (method != HttpMethod.Get)
+                    {
+                        var content = new StringContent(payload, Encoding.UTF8, "application/json");
                         requestMessage.Content = content;
+                    }
 
                     requestMessage.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 

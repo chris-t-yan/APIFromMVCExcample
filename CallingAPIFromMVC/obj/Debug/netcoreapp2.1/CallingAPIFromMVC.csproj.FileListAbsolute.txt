@@ -60,7 +60,6 @@ C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\obj\Debug\netco
 C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
 C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\obj\Debug\netcoreapp2.1\Razor\Views\Students\Index.cshtml.g.cs
 C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\obj\Debug\netcoreapp2.1\CallingAPIFromMVC.RazorTargetAssemblyInfo.cache

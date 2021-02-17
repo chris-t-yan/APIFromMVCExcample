@@ -16,6 +16,7 @@ namespace CallingAPIFromMVC.Controllers
         {
             _externalApiMangementService = externalApiMangementService;
         }
+
         // GET: UsersController
         public ActionResult Index()
         {
@@ -75,7 +76,7 @@ namespace CallingAPIFromMVC.Controllers
         // GET: UsersController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            return View(_externalApiMangementService.GetAll().FirstOrDefault(x => x.StudentId == id));
         }
 
         // POST: UsersController/Delete/5
@@ -85,6 +86,7 @@ namespace CallingAPIFromMVC.Controllers
         {
             try
             {
+                _externalApiMangementService.Delete(id);
                 return RedirectToAction(nameof(Index));
             }
             catch
