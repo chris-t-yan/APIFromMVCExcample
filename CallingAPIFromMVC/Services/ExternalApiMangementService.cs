@@ -1,4 +1,5 @@
 ﻿using CallingAPIFromMVC.Interfaces;
+using CallingAPIFromMVC.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,19 +14,26 @@ namespace CallingAPIFromMVC.Services
         private static string BASE_API_URL;
         public ExternalApiMangementService()
         {
-            BASE_API_URL = "Some URL";
+            BASE_API_URL = "https://localhost:44323/api/MockExternalRepo";
         }
-        public object GetAll()
+        public List<Student> GetAll()
         {
-            return SendRequest<string, object>($"{BASE_API_URL}/Get", null, HttpMethod.Get, new AuthenticationHeaderValue("Bearer", "SomeToken"));
+            
+            return SendRequest<string, List<Student>>($"{BASE_API_URL}", null, HttpMethod.Get, new AuthenticationHeaderValue("Bearer", "SomeToken"));
         }
-        public object Create(object o)
+        public Student Create(Student o)
         {
-            return SendRequest<object, object>($"{BASE_API_URL}/create", o, HttpMethod.Put, new AuthenticationHeaderValue("Bearer", "SomeToken"));
+            return SendRequest<Student, Student>($"{BASE_API_URL}/create", o, HttpMethod.Put, new AuthenticationHeaderValue("Bearer", "SomeToken"));
         }
-        public object Update(object o)
+        public Student Update(Student o)
         {
-            return SendRequest<object, object>($"{BASE_API_URL}/update", o, HttpMethod.Post, new AuthenticationHeaderValue("Bearer", "SomeToken"));
+            return SendRequest<Student, Student>($"{BASE_API_URL}/update", o, HttpMethod.Post, new AuthenticationHeaderValue("Bearer", "SomeToken"));
+        }
+
+        public Student Delete(int ID)
+        {
+            return SendRequest<int, Student>($"{BASE_API_URL}/delete", ID, HttpMethod.Delete, new AuthenticationHeaderValue("Bearer", "SomeToken"));
+
         }
     }
 }

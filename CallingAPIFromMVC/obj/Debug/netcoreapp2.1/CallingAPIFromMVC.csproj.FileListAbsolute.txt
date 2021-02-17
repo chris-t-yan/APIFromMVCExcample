@@ -47,7 +47,6 @@ C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\bin\Debug\netco
 C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\obj\Debug\netcoreapp2.1\CallingAPIFromMVC.csprojAssemblyReference.cache
 C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\obj\Debug\netcoreapp2.1\CallingAPIFromMVC.AssemblyInfoInputs.cache
 C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\obj\Debug\netcoreapp2.1\CallingAPIFromMVC.AssemblyInfo.cs
-C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\obj\Debug\netcoreapp2.1\CallingAPIFromMVC.csproj.CoreCompileInputs.cache
 C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\obj\Debug\netcoreapp2.1\CallingAPIFromMVC.RazorAssemblyInfo.cache
 C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\obj\Debug\netcoreapp2.1\CallingAPIFromMVC.RazorAssemblyInfo.cs
 C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\obj\Debug\netcoreapp2.1\CallingAPIFromMVC.TagHelpers.input.cache
@@ -71,3 +70,9 @@ C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\obj\Debug\netco
 C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\obj\Debug\netcoreapp2.1\CallingAPIFromMVC.pdb
 C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\obj\Debug\netcoreapp2.1\CallingAPIFromMVC.genruntimeconfig.cache
 C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\obj\Debug\netcoreapp2.1\CallingAPIFromMVC.csproj.CopyComplete
+C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\obj\Debug\netcoreapp2.1\CallingAPIFromMVC.csproj.CoreCompileInputs.cache
+C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\obj\Debug\netcoreapp2.1\Razor\Views\Users\Index.cshtml.g.cs
+C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\obj\Debug\netcoreapp2.1\Razor\Views\Users\Edit.cshtml.g.cs
+C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\obj\Debug\netcoreapp2.1\Razor\Views\Users\Delete.cshtml.g.cs
+C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\obj\Debug\netcoreapp2.1\Razor\Views\Users\Create.cshtml.g.cs
+C:\Users\bojan\Source\Repos\APIFromMVCExcample\CallingAPIFromMVC\obj\Debug\netcoreapp2.1\Razor\Views\Users\Details.cshtml.g.cs

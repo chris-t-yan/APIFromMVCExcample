@@ -1,4 +1,5 @@
-﻿using CallingAPIFromMVC.Models;
+﻿using CallingAPIFromMVC.Interfaces;
+using CallingAPIFromMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System;
@@ -12,14 +13,15 @@ namespace CallingAPIFromMVC.Controllers
 {
     public class StudentsController : Controller
     {
+        private readonly IExternalApiMangementService _externalApiMangementService;
 
         HttpClientHandler _clientHandler = new HttpClientHandler();
         Student _oStudent = new Student();
         List<Student> _oStudents = new List<Student>();
 
-        public StudentsController()
+        public StudentsController(IExternalApiMangementService externalApiMangementService)
         {
-            _clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+            _externalApiMangementService = externalApiMangementService;
         }
 
         public IActionResult Index()
@@ -27,6 +29,18 @@ namespace CallingAPIFromMVC.Controllers
             return View();
         }
 
+        #region new methods
+        public List<Student> GetAll() => 
+            _externalApiMangementService.GetAll();
+        public  Student GetStudentByID(int studentId) => _externalApiMangementService.GetAll().FirstOrDefault(x => x.StudentId == studentId);
+        [HttpPost]
+        public  Student Create(Student student) => _externalApiMangementService.Create(student);
+        [HttpPut]
+        public Student Update(Student student) => _externalApiMangementService.Update(student);
+        public Student DeleteUser(int studentID) => _externalApiMangementService.Delete(studentID);
+        #endregion
+
+        #region old methods
         [HttpGet]
         public async Task<List<Student>> GetAllStudents()
         {
@@ -86,7 +100,7 @@ namespace CallingAPIFromMVC.Controllers
             }
             return message;
         }
-
+        #endregion
     }   
 
 }

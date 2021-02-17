@@ -30,9 +30,12 @@ namespace CallingAPIFromMVC.Services
 
                     requestMessage.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                    foreach (var header in headers)
+                    if (headers != null && headers.Count > 0)
                     {
-                        requestMessage.Headers.Add(header.Key, header.Value);
+                        foreach (var header in headers)
+                        {
+                            requestMessage.Headers.Add(header.Key, header.Value);
+                        }
                     }
 
 
