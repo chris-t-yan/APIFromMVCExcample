@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bojan\\Source\\Repos\\APIFromMVCExcample\\CallingAPIFromMVC\\CallingAPIFromMVC.csproj": {}
+    "C:\\Users\\hrist\\Desktop\\CallingAPIFromMVC\\APIFromMVCExcample\\CallingAPIFromMVC\\CallingAPIFromMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bojan\\Source\\Repos\\APIFromMVCExcample\\CallingAPIFromMVC\\CallingAPIFromMVC.csproj": {
+    "C:\\Users\\hrist\\Desktop\\CallingAPIFromMVC\\APIFromMVCExcample\\CallingAPIFromMVC\\CallingAPIFromMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bojan\\Source\\Repos\\APIFromMVCExcample\\CallingAPIFromMVC\\CallingAPIFromMVC.csproj",
+        "projectUniqueName": "C:\\Users\\hrist\\Desktop\\CallingAPIFromMVC\\APIFromMVCExcample\\CallingAPIFromMVC\\CallingAPIFromMVC.csproj",
         "projectName": "CallingAPIFromMVC",
-        "projectPath": "C:\\Users\\bojan\\Source\\Repos\\APIFromMVCExcample\\CallingAPIFromMVC\\CallingAPIFromMVC.csproj",
-        "packagesPath": "C:\\Users\\bojan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bojan\\Source\\Repos\\APIFromMVCExcample\\CallingAPIFromMVC\\obj\\",
+        "projectPath": "C:\\Users\\hrist\\Desktop\\CallingAPIFromMVC\\APIFromMVCExcample\\CallingAPIFromMVC\\CallingAPIFromMVC.csproj",
+        "packagesPath": "C:\\Users\\hrist\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hrist\\Desktop\\CallingAPIFromMVC\\APIFromMVCExcample\\CallingAPIFromMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\bojan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hrist\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,6 +29,7 @@
         },
         "frameworks": {
           "netcoreapp2.1": {
+            "targetAlias": "netcoreapp2.1",
             "projectReferences": {}
           }
         },
@@ -40,6 +41,7 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
           "dependencies": {
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
@@ -73,7 +75,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
