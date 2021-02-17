@@ -33,9 +33,10 @@ namespace CallingAPIFromMVC
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            services.AddScoped(typeof(IBaseApiService<IEntity>), typeof(BaseApiService<IEntity>));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddScoped<IStudentMangementService, StudentMangementService>();
+            services.AddScoped<ITeacherManagementService, TeacherManagementService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
