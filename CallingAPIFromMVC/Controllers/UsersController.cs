@@ -26,7 +26,7 @@ namespace CallingAPIFromMVC.Controllers
         // GET: UsersController/Details/5
         public ActionResult Details(int id)
         {
-            return View(_externalApiMangementService.GetAll().FirstOrDefault(x=> x.StudentId == id));
+            return View(_externalApiMangementService.GetAll().FirstOrDefault(x=> x.ID == id));
         }
 
         // GET: UsersController/Create
@@ -54,7 +54,7 @@ namespace CallingAPIFromMVC.Controllers
         // GET: UsersController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View(_externalApiMangementService.GetAll().FirstOrDefault(x => x.StudentId == id));
+            return View(_externalApiMangementService.GetAll().FirstOrDefault(x => x.ID == id));
         }
 
         // POST: UsersController/Edit/5
