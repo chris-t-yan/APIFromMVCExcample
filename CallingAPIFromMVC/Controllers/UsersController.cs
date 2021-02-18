@@ -38,11 +38,11 @@ namespace CallingAPIFromMVC.Controllers
         // POST: UsersController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Student student)
         {
             try
             {
-                _externalApiMangementService.Create((Student)collection);
+                _externalApiMangementService.Create(student);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -60,11 +60,11 @@ namespace CallingAPIFromMVC.Controllers
         // POST: UsersController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, Student student)
         {
             try
             {
-                _externalApiMangementService.Update((Student)collection);
+                _externalApiMangementService.Update(student);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -76,23 +76,10 @@ namespace CallingAPIFromMVC.Controllers
         // GET: UsersController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View(_externalApiMangementService.GetAll().FirstOrDefault(x => x.StudentId == id));
+            _externalApiMangementService.Delete(id);
+            return View();
         }
 
-        // POST: UsersController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                _externalApiMangementService.Delete(id);
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        
     }
 }

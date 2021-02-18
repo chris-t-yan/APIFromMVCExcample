@@ -12,37 +12,28 @@ namespace CallingAPIFromMVC.Services
 {
     public class BaseApiService
     {
-        protected TResponse SendRequest<TRequest, TResponse>(string uri, TRequest request, HttpMethod method, AuthenticationHeaderValue authentication, Dictionary<string, string> headers = null) where TResponse : class
+        protected TResponse SendRequest<TRequest, TResponse>(string uri, TRequest sentObjToApi, HttpMethod method, AuthenticationHeaderValue authenticationToken) where TResponse : class
         {
             try
             {
-                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11;
                 using (var client = new HttpClient())
                 {
-                    client.DefaultRequestHeaders.Authorization = authentication;
-                    var payload = JsonConvert.SerializeObject(request);
+                    client.DefaultRequestHeaders.Authorization = authenticationToken;
+                    var requestContent = JsonConvert.SerializeObject(sentObjToApi);
 
                     var requestMessage = new HttpRequestMessage() { Method = method, RequestUri = new Uri(uri) };
 
                     if (method != HttpMethod.Get)
                     {
-                        var content = new StringContent(payload, Encoding.UTF8, "application/json");
+                        var content = new StringContent(requestContent, Encoding.UTF8, "application/json");
                         requestMessage.Content = content;
                     }
 
-                    requestMessage.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-                    if (headers != null && headers.Count > 0)
-                    {
-                        foreach (var header in headers)
-                        {
-                            requestMessage.Headers.Add(header.Key, header.Value);
-                        }
-                    }
-
-
                     var httpResponseMessage = client.SendAsync(requestMessage).Result;
-                    var responseContent = httpResponseMessage.Content.ReadAsStringAsync().Result.Replace(@"\", string.Empty).Trim('"');
+                    var responseContent = httpResponseMessage.Content.ReadAsStringAsync().Result;
+
+                    httpResponseMessage.EnsureSuccessStatusCode(); 
+                    
 
                     if (string.IsNullOrEmpty(responseContent))
                     {

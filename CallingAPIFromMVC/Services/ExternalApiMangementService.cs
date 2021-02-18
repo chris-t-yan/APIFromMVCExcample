@@ -11,24 +11,22 @@ namespace CallingAPIFromMVC.Services
 {
     public class ExternalApiMangementService : BaseApiService, IExternalApiMangementService
     {
-        private static string BASE_API_URL;
-        private static string BEARER_TOKEN;
-        public ExternalApiMangementService()
-        {
-            BEARER_TOKEN = "SADAS";
-            BASE_API_URL = "https://localhost:44323/api/MockExternalRepo";
-        }
+        private const string BASE_API_URL = "baseurl here";
+        private const string BEARER_TOKEN = "baseurl here";
+       
         public List<Student> GetAll()
         {
+            
             return SendRequest<string, List<Student>>($"{BASE_API_URL}", string.Empty, HttpMethod.Get, new AuthenticationHeaderValue("Basic", BEARER_TOKEN));
+           
         }
-        public Student Create(Student o)
+        public Student Create(Student student)
         {
-            return SendRequest<Student, Student>($"{BASE_API_URL}/create", o, HttpMethod.Put, new AuthenticationHeaderValue("Bearer", BEARER_TOKEN));
+            return SendRequest<Student, Student>($"{BASE_API_URL}/create", student, HttpMethod.Put, new AuthenticationHeaderValue("Bearer", BEARER_TOKEN));
         }
-        public Student Update(Student o)
+        public Student Update(Student student)
         {
-            return SendRequest<Student, Student>($"{BASE_API_URL}/update", o, HttpMethod.Post, new AuthenticationHeaderValue("Bearer", BEARER_TOKEN));
+            return SendRequest<Student, Student>($"{BASE_API_URL}/update", student, HttpMethod.Post, new AuthenticationHeaderValue("Bearer", BEARER_TOKEN));
         }
 
         public Student Delete(int ID)

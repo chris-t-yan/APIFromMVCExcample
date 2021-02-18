@@ -9,8 +9,8 @@ namespace CallingAPIFromMVC.Interfaces
     public interface IExternalApiMangementService
     {
         List<Student> GetAll();
-        Student Create(Student o);
-        Student Update(Student o);
+        Student Create(Student student);
+        Student Update(Student student);
         Student Delete(int ID);
     }
 }
